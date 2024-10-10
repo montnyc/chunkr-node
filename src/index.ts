@@ -1,16 +1,13 @@
-import { ChunkrAIClient } from './client';
+import { ChunkrClient } from './client';
 import { FilesResource } from './resources/files';
-import { QueryResource } from './resources/query';
 
 export class ChunkrAI {
-    private client: ChunkrAIClient;
+    private client: ChunkrClient;
     public files: FilesResource;
-    public query: QueryResource;
 
     constructor(apiKey: string) {
-        this.client = new ChunkrAIClient(apiKey);
+        this.client = new ChunkrClient(apiKey);
         this.files = new FilesResource(this.client);
-        this.query = new QueryResource(this.client);
     }
 
     async getTask(taskId: string): Promise<any> {

@@ -2,7 +2,7 @@ import fetch, { RequestInit, Response } from 'node-fetch';
 import { AbortController } from 'abort-controller';
 import { HttpsAgent } from 'agentkeepalive';
 
-export class ChunkrAIClient {
+export class ChunkrClient {
     private apiKey: string;
     private baseUrl: string;
     private keepAliveAgent: HttpsAgent;
@@ -71,13 +71,5 @@ export class ChunkrAIClient {
 
     async getTask(taskId: string): Promise<any> {
         return this.request(`/task/${taskId}`, { method: 'GET' });
-    }
-
-    async query(taskId: string, query: string): Promise<any> {
-        return this.request(`/task/${taskId}/query`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ query }),
-        });
     }
 }

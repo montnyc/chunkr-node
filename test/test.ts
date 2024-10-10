@@ -19,6 +19,3 @@ console.log(taskStatus1);
 
 // Get task status
 // const taskStatus = await chunkr.getTask(uploadResponse.task_id);
-
-// Query the processed document
-// const queryResponse = await chunkr.query.query(uploadResponse.task_id, 'Your query here');

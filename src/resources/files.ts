@@ -1,4 +1,4 @@
-import { ChunkrAIClient } from '../client';
+import { ChunkrClient } from '../client';
 import { FormData } from 'formdata-node';
 import { FormDataEncoder } from 'form-data-encoder';
 import * as fs from 'fs';
@@ -6,9 +6,9 @@ import path from 'path';
 import { Blob } from 'buffer';
 
 export class FilesResource {
-    private client: ChunkrAIClient;
+    private client: ChunkrClient;
 
-    constructor(client: ChunkrAIClient) {
+    constructor(client: ChunkrClient) {
         this.client = client;
     }
 
