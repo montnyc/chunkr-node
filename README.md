@@ -7,7 +7,7 @@ This SDK provides a convenient way to interact with the Chunkr AI API for docume
 To install the Chunkr AI SDK, use npm:
 
 ```bash
-npm install chunkr-ai-sdk
+npm install chunkr-node
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install chunkr-ai-sdk
 Here's a basic example of how to use the Chunkr AI SDK:
 
 ```typescript
-import ChunkrAI from 'chunkr-ai-sdk';
+import ChunkrAI from 'chunkr-node';
 
 async function main() {
   try {
