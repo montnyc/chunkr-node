@@ -1,12 +1,12 @@
 {
   "name": "chunkr-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial Chunkr AI SDK for Node.js",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "scripts": {
-    "start": "node dist/index.js",
-    "build": "tsc",
-    "dev": "tsc --watch & node dist/index.js"
+    "prepublishOnly": "npm run type-check",
+    "type-check": "tsc --noEmit"
   },
   "keywords": ["chunkr", "ai", "sdk", "api"],
   "author": "montynyc",
@@ -22,5 +22,8 @@
     "form-data-encoder": "^4.0.2",
     "formdata-node": "^6.0.3",
     "node-fetch": "^2.7.0"
-  }
+  },
+    "files": [
+    "src"
+  ]
 }
